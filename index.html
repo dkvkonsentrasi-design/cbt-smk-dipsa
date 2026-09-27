@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CBT SMK DIPSA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="card" id="loginCard">
+      <h1>CBT SMK DIPSA</h1>
+      <p class="muted">Computer Based Test Online</p>
+
+      <form id="loginForm">
+        <label>Email</label>
+        <input id="email" type="email" placeholder="email siswa/guru" required>
+
+        <label>Password</label>
+        <input id="password" type="password" placeholder="password" required>
+
+        <button type="submit">Masuk</button>
+      </form>
+
+      <p id="loginMessage" class="message"></p>
+      <p class="small">Akun dibuat melalui Firebase Authentication.</p>
+    </section>
+
+    <section class="card hidden" id="cbtCard">
+      <div class="topbar">
+        <div>
+          <h1 id="examTitle">Ujian CBT</h1>
+          <p id="userInfo" class="muted"></p>
+        </div>
+        <div class="timer" id="timer">30:00</div>
+      </div>
+
+      <div class="progress">
+        <span id="questionNumber">Soal 1 dari 10</span>
+        <span id="answeredCount">Terjawab: 0</span>
+      </div>
+
+      <div id="questionBox"></div>
+
+      <div class="actions">
+        <button class="secondary" id="prevBtn">Sebelumnya</button>
+        <button id="nextBtn">Berikutnya</button>
+        <button class="danger hidden" id="submitBtn">Selesai Ujian</button>
+      </div>
+    </section>
+
+    <section class="card hidden" id="resultCard">
+      <h1>Hasil Ujian</h1>
+      <div id="result"></div>
+      <button id="logoutBtn">Keluar</button>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

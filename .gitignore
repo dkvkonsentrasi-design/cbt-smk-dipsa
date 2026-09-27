@@ -1,0 +1,5 @@
+# Firebase/local files
+.firebase/
+firebase-debug.log
+.env
+.env.*
